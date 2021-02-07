@@ -1,7 +1,7 @@
-FROM trivadis/streamsets-base:3.20.0
+FROM trivadis/streamsets-base:3.21.0
 
 # Build time argument to install packages
-ARG PACKAGES_TO_INSTALL=streamsets-datacollector-apache-kafka_2_6-lib,streamsets-datacollector-cassandra_3-lib,streamsets-datacollector-elasticsearch_6-lib,streamsets-datacollector-groovy_2_4-lib
+ARG PACKAGES_TO_INSTALL=streamsets-datacollector-apache-kafka_2_6-lib,streamsets-datacollector-cassandra_3-lib,streamsets-datacollector-elasticsearch_7-lib,streamsets-datacollector-mongodb_4-lib,streamsets-datacollector-groovy_2_4-lib
 
 # Install the packages
 RUN if [[ ! -z $PACKAGES_TO_INSTALL ]]; then $SDC_DIST/bin/streamsets stagelibs -install=$PACKAGES_TO_INSTALL ; fi

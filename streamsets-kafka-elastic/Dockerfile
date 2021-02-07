@@ -1,4 +1,4 @@
-FROM trivadis/streamsets-base:3.20.0
+FROM trivadis/streamsets-base:3.21.0
 
 # Build time argument to install packages
 ARG PACKAGES_TO_INSTALL=streamsets-datacollector-apache-kafka_2_6-lib,streamsets-datacollector-elasticsearch_5-lib,streamsets-datacollector-groovy_2_4-lib
